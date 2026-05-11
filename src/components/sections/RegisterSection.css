@@ -1,15 +1,18 @@
 .maxv-register-section {
-  padding: 78px max(32px, calc((100% - 1508px) / 2));
+  width: min(1440px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 78px 0;
+  background: var(--bg-white);
+}
+
+.maxv-register-section .maxv-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
   gap: 42px;
-  background: var(--bg-white);
-  border: 2px dashed #000508;
 }
 
 .maxv-register-section__content {
   align-self: center;
-  border: 2px dashed #000508;
 }
 
 .maxv-register-section h2 {
@@ -74,7 +77,6 @@
   background: var(--bg-white);
   border: 1px solid #dfeaf2;
   border-radius: 8px;
-  border: 2px dashed #000508;
 }
 
 .maxv-register-form label {
@@ -117,14 +119,15 @@
 }
 
 @media (max-width: 1100px) {
-  .maxv-register-section {
+  .maxv-register-section .maxv-container {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 680px) {
   .maxv-register-section {
-    padding: 48px 15px;
+    width: min(100% - 32px, 560px);
+    padding: 48px 0;
   }
 
   .maxv-register-section h2 {

@@ -1,14 +1,12 @@
 .maxv-feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-    border: 2px dashed #000508;
-
+  
   gap: 24px;
 }
 
 .maxv-feature-card {
   background: var(--bg-white);
-  
   border: 2px solid #e8f4f8;
   border-radius: 12px;
   padding: 24px;

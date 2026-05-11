@@ -11,11 +11,12 @@ function FAQSection() {
 
   return (
     <section className="maxv-section maxv-section--soft" id="faq">
-      <div className="maxv-section__head maxv-section__head--center">
-        <h2>Câu hỏi thường gặp về Maxv Accounting</h2>
-        <p>Tìm hiểu thêm về phần mềm kế toán online Maxv Accounting</p>
-      </div>
-      <div className="maxv-faq-container">
+      <div className="maxv-container">
+        <div className="maxv-section__head maxv-section__head--center">
+          <h2>Câu hỏi thường gặp về Maxv Accounting</h2>
+          <p>Tìm hiểu thêm về phần mềm kế toán online Maxv Accounting</p>
+        </div>
+        <div className="maxv-faq-container">
         {faqItems.map((item, index) => (
           <div
             className={`maxv-faq-item${openIndex === index ? " is-open" : ""}`}
@@ -34,6 +35,7 @@ function FAQSection() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

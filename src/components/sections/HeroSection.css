@@ -1,10 +1,11 @@
+
+
 .maxv-hero {
   min-height: 600px;
-  width: min(1508px, calc(100% - 64px));
+  width: min(1440px, calc(100% - 64px));
   margin: 0 auto;
   padding: 60px 0;
   display: grid;
-  border: 2px dashed #000508;
   grid-template-columns: minmax(0, 1.2fr) minmax(400px, 0.8fr);
   align-items: center;
   gap: 64px;

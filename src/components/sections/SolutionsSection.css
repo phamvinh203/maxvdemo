@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-    border: 2px dashed #000508;
-
 }
 
 .maxv-card--accent {

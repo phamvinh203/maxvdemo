@@ -1,13 +1,7 @@
-.maxv-section--soft {
-  background: var(--bg-white);
-}
-
 .maxv-problem-container {
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: var(--spacing-xl);
-  border: 2px dashed #000508;
-
   margin: 0 auto;
   align-items: start;
 }

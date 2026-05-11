@@ -6,7 +6,6 @@ function PricingSection() {
     <section className="maxv-section maxv-section--soft" id="bao-gia">
       <div className="maxv-container">
         <div className="maxv-section__head maxv-section__head--center">
-          <p className="maxv-eyebrow">Bảng báo giá</p>
           <h2>Bảng báo giá phần mềm kế toán Maxv Accounting</h2>
           <p>
             Các gói phù hợp cho dịch vụ kế toán, doanh nghiệp đơn lẻ, cài đặt

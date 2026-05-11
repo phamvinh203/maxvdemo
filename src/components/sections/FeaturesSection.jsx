@@ -6,7 +6,6 @@ function FeaturesSection() {
     <section className="maxv-section" id="tinh-nang">
       <div className="maxv-container">
         <div className="maxv-section__head maxv-section__head--center">
-          <p className="maxv-eyebrow">Tính năng</p>
           <h2>Tính năng phần mềm Maxv Accounting</h2>
         </div>
         <div className="maxv-feature-grid">

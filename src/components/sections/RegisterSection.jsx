@@ -4,7 +4,8 @@ import "./RegisterSection.css";
 function RegisterSection() {
   return (
     <section className="maxv-register-section" id="dang-ky">
-      <div className="maxv-register-section__content">
+      <div className="maxv-container">
+        <div className="maxv-register-section__content">
         <p className="maxv-eyebrow">Đăng ký phần mềm ngay thôi</p>
         <h2>Đăng ký Maxv Accounting</h2>
         <ul>
@@ -49,6 +50,7 @@ function RegisterSection() {
         </label>
         <button type="button">Đăng ký</button>
       </form>
+      </div>
     </section>
   );
 }
