@@ -4,7 +4,6 @@ import "../../styles/Header.css";
 function Header() {
   return (
     <header className="maxv-header">
-      <div className="maxv-header__top-line" />
       <div className="maxv-header__inner">
         <a className="maxv-header__logo" href="#top" aria-label="Maxv">
           <img
@@ -24,14 +23,12 @@ function Header() {
                 href={item.href}
               >
                 <span>{item.label}</span>
-                {item.children && <span className="maxv-header__chevron">⌄</span>}
+                {item.children && <span className="maxv-header__chevron"></span>}
               </a>
 
               {item.children && (
                 <div className="maxv-header__dropdown">
-                  <div className="maxv-header__dropdown-head">
-                    <strong>{item.label}</strong>
-                  </div>
+                  
                   {item.children.map((child) => (
                     <a className="maxv-header__dropdown-link" href={child.href} key={child.label}>
                       {child.label}
