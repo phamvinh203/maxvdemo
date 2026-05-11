@@ -3,7 +3,7 @@
   top: 0;
   z-index: 50;
   width: 100%;
-  background: #fff;
+  background: var(--bg-white);
   border-bottom: 2px solid #e8f4f8;
   box-shadow: 0 2px 8px rgba(7, 135, 207, 0.08);
   font-family: Arial, Helvetica, sans-serif;
@@ -104,7 +104,7 @@
   left: 0;
   min-width: 280px;
   padding: 0;
-  background: #fff;
+  background: var(--bg-white);
   border: 1px solid #e8f4f8;
   /* border-top: 4px solid #0787cf; */
   border-radius: 0 0 8px 8px;
@@ -143,7 +143,7 @@
 .maxv-header__dropdown-link:hover {
   padding-left: 26px;
   color: #0787cf;
-  background: linear-gradient(90deg, #f0f9ff 0%, #e8f4f8 100%);
+  background: var(--bg-white);
   font-weight: 700;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .maxv-header__icon:hover {
-  background: #f0f9ff;
+  background: var(--bg-white);
   transform: scale(1.1);
 }
 

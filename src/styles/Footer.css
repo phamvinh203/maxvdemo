@@ -3,7 +3,7 @@
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   color: #050505;
-  background-color: #fff;
+  background-color: var(--bg-white);
   background-image: radial-gradient(#e7e7e7 1.5px, transparent 1.5px);
   background-size: 56px 56px;
 }
@@ -60,7 +60,7 @@
 .maxv-footer__facebook-widget {
   width: 374px;
   border: 1px solid #e2e2e2;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .maxv-footer__facebook-head {
@@ -102,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #efefef;
-  background: #f6f6f6;
+  background: var(--bg-white);
 }
 
 .maxv-footer__facebook-actions button {
@@ -110,7 +110,7 @@
   padding: 0 12px;
   border: 1px solid #d4d8df;
   border-radius: 2px;
-  background: #fff;
+  background: var(--bg-white);
   color: #3c4a61;
   font-size: 14px;
   font-weight: 700;

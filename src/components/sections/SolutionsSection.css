@@ -2,17 +2,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  max-width: 1400px;
-  margin: 0 auto;
+    border: 2px dashed #000508;
+
 }
 
 .maxv-card--accent {
-  background: #fff;
+  background: var(--bg-white);
   border: none;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(7, 135, 207, 0.12);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   display: flex;
   flex-direction: column;
 }
@@ -28,9 +28,9 @@
   margin: 0 auto 16px;
   align-self: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #eaf7ff 0%, #f7fbff 100%);
+  background: var(--bg-white);
   position: relative;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
 .maxv-card__image img {
@@ -53,7 +53,7 @@
 
 .maxv-card__content h3 {
   margin: 0 0 12px;
-  color: #0b2b54;
+  color: var(--color-text-dark);
   font-size: 20px;
   font-weight: 700;
   line-height: 1.3;
@@ -62,7 +62,7 @@
 
 .maxv-card__content p {
   margin: 0;
-  color: #4b5b70;
+  color: var(--color-text-medium);
   font-size: 15px;
   line-height: 1.6;
   flex: 1;
