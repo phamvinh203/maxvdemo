@@ -94,8 +94,8 @@
   align-items: center;
   justify-content: center;
   background: var(--bg-white);
-  /* border: 2px solid #dceef8; */
-  border: 2px dashed #0787cf;
+  border: 2px solid #dceef8;
+  
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(7, 135, 207, 0.15);
