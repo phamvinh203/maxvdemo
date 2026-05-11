@@ -1,4 +1,5 @@
 import { registerBenefits } from "./sectionData";
+import "./RegisterSection.css";
 
 function RegisterSection() {
   return (
