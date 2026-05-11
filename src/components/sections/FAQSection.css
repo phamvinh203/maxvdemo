@@ -1,0 +1,113 @@
+.maxv-faq-container {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.maxv-faq-item {
+  background: #fff;
+  border: 2px solid #e8f4f8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(7, 135, 207, 0.08);
+}
+
+.maxv-faq-item:hover {
+  box-shadow: 0 4px 16px rgba(7, 135, 207, 0.12);
+  border-color: #d0e8f0;
+}
+
+.maxv-faq-item.is-open {
+  border-color: #0787cf;
+  box-shadow: 0 8px 24px rgba(7, 135, 207, 0.15);
+}
+
+.maxv-faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: #0b2b54;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.maxv-faq-question:hover {
+  color: #0787cf;
+  background: #f8fafc;
+}
+
+.maxv-faq-question span:first-child {
+  flex: 1;
+}
+
+.maxv-faq-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0787cf 0%, #0568a3 100%);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.maxv-faq-item.is-open .maxv-faq-icon {
+  transform: rotate(180deg);
+}
+
+.maxv-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.maxv-faq-item.is-open .maxv-faq-answer {
+  max-height: 500px;
+  padding: 0 24px 20px;
+}
+
+.maxv-faq-answer p {
+  margin: 0;
+  color: #4b5b70;
+  font-size: 15px;
+  line-height: 1.7;
+  padding-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .maxv-faq-question {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  .maxv-faq-item.is-open .maxv-faq-answer {
+    padding: 0 20px 16px;
+  }
+
+  .maxv-faq-answer p {
+    font-size: 14px;
+  }
+
+  .maxv-faq-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+}

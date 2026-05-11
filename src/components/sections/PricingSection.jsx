@@ -1,0 +1,37 @@
+import { pricingPlans } from "./sectionData";
+import "./PricingSection.css";
+
+function PricingSection() {
+  return (
+    <section className="maxv-section maxv-section--soft" id="bao-gia">
+      <div className="maxv-section__head maxv-section__head--center">
+        <p className="maxv-eyebrow">Bảng báo giá</p>
+        <h2>Bảng báo giá phần mềm kế toán Maxv Accounting</h2>
+        <p>
+          Các gói phù hợp cho dịch vụ kế toán, doanh nghiệp đơn lẻ, cài đặt
+          offline và nhu cầu chỉnh sửa theo đặc thù quản lý.
+        </p>
+      </div>
+      <div className="maxv-pricing-grid">
+        {pricingPlans.map((plan) => (
+          <article className="maxv-price-card" key={plan.title}>
+            <div className="maxv-price-card__head">
+              <h3>{plan.title}</h3>
+              <p>{plan.subtitle}</p>
+            </div>
+            <div className="maxv-price-card__rows">
+              {plan.rows.map(([label, price]) => (
+                <div className="maxv-price-row" key={label}>
+                  <span className="maxv-price-row__label">{label}</span>
+                  <strong>{price}</strong>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default PricingSection;

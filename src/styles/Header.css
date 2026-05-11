@@ -1,0 +1,237 @@
+.maxv-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: #fff;
+  border-bottom: 2px solid #e8f4f8;
+  box-shadow: 0 2px 8px rgba(7, 135, 207, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.maxv-header__inner {
+  width: min(1508px, calc(100% - 64px));
+  min-height: 110px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 16px 0;
+}
+
+.maxv-header__logo {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.maxv-header__logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.maxv-header__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.maxv-header__item.has-dropdown {
+  position: relative;
+}
+
+.maxv-header__item.has-dropdown::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 3px;
+  background: #0787cf;
+  transition: transform 0.2s ease;
+}
+
+.maxv-header__item.has-dropdown:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.maxv-header__item {
+  position: relative;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.maxv-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  margin: -8px -12px;
+  color: #2f2f2f;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.maxv-header__link:hover,
+.maxv-header__link.is-active {
+  color: #0787cf;
+  background: #f0f9ff;
+}
+
+.maxv-header__item:hover .maxv-header__link {
+  color: #0787cf;
+}
+
+.maxv-header__chevron {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.7;
+  transform: translateY(-1px);
+}
+
+.maxv-header__dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  min-width: 280px;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #e8f4f8;
+  border-top: 4px solid #0787cf;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 100;
+}
+
+.maxv-header__item:hover .maxv-header__dropdown,
+.maxv-header__item:focus-within .maxv-header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.maxv-header__dropdown-head {
+  padding: 12px 20px 14px;
+  color: #0787cf;
+  border-bottom: 2px solid #e8f4f8;
+  background: #f8fbff;
+}
+
+.maxv-header__dropdown-link {
+  display: block;
+  padding: 14px 20px;
+  color: #2f2f2f;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f5f9;
+  transition: all 0.2s ease;
+}
+
+.maxv-header__dropdown-link:last-child {
+  border-bottom: none;
+  border-radius: 0 0 6px 6px;
+}
+
+.maxv-header__dropdown-link:hover {
+  padding-left: 26px;
+  color: #0787cf;
+  background: linear-gradient(90deg, #f0f9ff 0%, #e8f4f8 100%);
+  font-weight: 700;
+}
+
+.maxv-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 2px;
+}
+
+.maxv-header__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.maxv-header__icon:hover {
+  background: #f0f9ff;
+  transform: scale(1.1);
+}
+
+.maxv-header__icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+@media (max-width: 1180px) {
+  .maxv-header__inner {
+    min-height: 94px;
+    gap: 22px;
+  }
+
+  .maxv-header__nav {
+    gap: 16px;
+  }
+
+  .maxv-header__link {
+    font-size: 14px;
+  }
+
+  .maxv-header__logo img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .maxv-header__inner {
+    width: min(100% - 28px, 720px);
+    min-height: auto;
+    padding: 18px 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .maxv-header__logo {
+    width: calc(100% - 90px);
+  }
+
+  .maxv-header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 10px 0 2px;
+  }
+
+  .maxv-header__item {
+    position: static;
+  }
+
+  .maxv-header__dropdown {
+    display: none;
+  }
+}
