@@ -7,10 +7,6 @@ function PricingSection() {
       <div className="maxv-container">
         <div className="maxv-section__head maxv-section__head--center">
           <h2>Bảng báo giá phần mềm kế toán Maxv Accounting</h2>
-          <p>
-            Các gói phù hợp cho dịch vụ kế toán, doanh nghiệp đơn lẻ, cài đặt
-            offline và nhu cầu chỉnh sửa theo đặc thù quản lý.
-          </p>
         </div>
         <div className="maxv-pricing-grid">
           {pricingPlans.map((plan) => (
