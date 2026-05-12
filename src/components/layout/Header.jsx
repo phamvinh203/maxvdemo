@@ -1,53 +1,55 @@
-import { navItems } from "./Navbar";
+import { useState } from "react";
 import "../../styles/Header.css";
 
+const landingLinks = [
+  { label: "Gi\u1ea3i ph\u00e1p", href: "#giai-phap" },
+  { label: "T\u00ednh n\u0103ng", href: "#tinh-nang" },
+  { label: "B\u1ea3ng gi\u00e1", href: "#bao-gia" },
+  { label: "FAQ", href: "#faq" },
+];
+
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="maxv-header">
+    <header className={`maxv-header${isMenuOpen ? " is-menu-open" : ""}`}>
       <div className="maxv-header__inner">
-        <a className="maxv-header__logo" href="#top" aria-label="Maxv">
+        <a className="maxv-header__logo" href="#top" aria-label="Maxv" onClick={closeMenu}>
           <img
             src="https://maxv.vn/wp-content/uploads/2024/04/Logo-Maxv-200x60-New-01.png"
             alt="MAXV"
           />
         </a>
 
-        <nav className="maxv-header__nav" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <div
-              className={`maxv-header__item${item.children ? " has-dropdown" : ""}`}
-              key={item.label}
-            >
-              <a
-                className={`maxv-header__link${item.active ? " is-active" : ""}`}
-                href={item.href}
-              >
-                <span>{item.label}</span>
-                {item.children && <span className="maxv-header__chevron"></span>}
-              </a>
-
-              {item.children && (
-                <div className="maxv-header__dropdown">
-                  
-                  {item.children.map((child) => (
-                    <a className="maxv-header__dropdown-link" href={child.href} key={child.label}>
-                      {child.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+        <nav className="maxv-header__nav" aria-label="Di\u1ec1u h\u01b0\u1edbng trang">
+          {landingLinks.map((item) => (
+            <a className="maxv-header__link" href={item.href} key={item.href} onClick={closeMenu}>
+              {item.label}
+            </a>
           ))}
         </nav>
 
-        <div className="maxv-header__actions" aria-label="Quick actions">
-          <a className="maxv-header__icon" href="#bao-gia" aria-label="Giỏ hàng">
-            <img src="/icons/cart.png" alt="Giỏ hàng" />
-          </a>
-          <a className="maxv-header__icon" href="#tim-kiem" aria-label="Tìm kiếm">
-            <img src="/icons/search.png" alt="Tìm kiếm" />
+        <div className="maxv-header__actions">
+          <a className="maxv-header__cta" href="#dang-ky" onClick={closeMenu}>
+            Dùng thử ngay
           </a>
         </div>
+
+        <button
+          className="maxv-header__menu-button"
+          type="button"
+          aria-label={isMenuOpen ? "\u0110\u00f3ng menu" : "M\u1edf menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((current) => !current)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </header>
   );
