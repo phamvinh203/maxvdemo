@@ -3,6 +3,9 @@
    =================================== */
 
 :root {
+  /* Typography */
+  --font-primary: "Google Sans", sans-serif;
+
   /* Primary Colors */
   --color-primary: #0787cf;
   --color-primary-dark: #0568a3;
@@ -59,6 +62,27 @@
   /* Container */
   --container-max-width: 1440px;
   --container-padding: 32px;
+}
+
+html {
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--font-primary) !important;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 /* ===================================

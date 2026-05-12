@@ -1,4 +1,4 @@
-import { accountingProblems } from "./sectionData";
+import { accountingProblems } from "../../constants/sectionData";
 import "./ProblemsSection.css";
 
 function ProblemsSection() {

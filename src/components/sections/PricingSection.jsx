@@ -1,4 +1,4 @@
-import { pricingPlans } from "./sectionData";
+import { pricingPlans } from "../../constants/sectionData";
 import "./PricingSection.css";
 
 function PricingSection() {

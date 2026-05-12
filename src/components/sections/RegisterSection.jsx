@@ -1,4 +1,4 @@
-import { registerBenefits } from "./sectionData";
+import { registerBenefits } from "../../constants/sectionData";
 import "./RegisterSection.css";
 import "./FeaturesSection.css";
 

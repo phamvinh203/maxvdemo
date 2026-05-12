@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { faqItems } from "./sectionData";
+import { faqItems } from "../../constants/sectionData";
 import "./FAQSection.css";
 
 function FAQSection() {

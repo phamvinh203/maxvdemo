@@ -1,4 +1,4 @@
-import { reasonCards } from "./sectionData";
+import { reasonCards } from "../../constants/sectionData";
 import "./ReasonsSection.css";
 
 function ReasonsSection() {

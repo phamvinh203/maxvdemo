@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { featureGroups } from "./sectionData";
+import { featureGroups } from "../../constants/sectionData";
 import "./FeaturesSection.css";
 
 function FeaturesSection() {

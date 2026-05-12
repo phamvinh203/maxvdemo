@@ -1,4 +1,4 @@
-import { solutionCards } from "./sectionData";
+import { solutionCards } from "../../constants/sectionData";
 import "./SolutionsSection.css";
 
 function SolutionsSection() {
